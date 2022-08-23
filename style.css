@@ -1,9 +1,23 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
+  margin: auto;
+  margin-top: 5%;
+  min-height: 720px;
+  max-width: 720px;
   display: flex;
+  flex-wrap: wrap;
   border: 1px black solid;
 }
 
 .pixel {
-  border: 2px red solid;
+  background-color: grey;
   flex: 1;
+}
+.break {
+  flex-basis: 100%;
+  height: 0px;
 }
