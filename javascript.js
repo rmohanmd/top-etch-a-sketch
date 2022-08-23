@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 
-let dimension = 25;
+let dimension = 100;
 
 const pads = 720 / 2 / dimension;
 for (y = 0; y < dimension; y++) {
@@ -10,8 +10,9 @@ for (y = 0; y < dimension; y++) {
     container.appendChild(pixels);
     pixels.style.padding = `${pads}px`;
   }
-
-  //   const lineBreak = document.createElement("div");
-  //   lineBreak.classList.add("break");
-  //   container.appendChild(lineBreak);
 }
+
+const pixel = document.querySelectorAll(".pixel");
+pixel.forEach((pixel) =>
+  pixel.addEventListener("mouseenter", (e) => pixel.classList.add("highlight"))
+);
