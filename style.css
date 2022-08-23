@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  border: 1px black solid;
+}
+
+.pixel {
+  border: 2px red solid;
+  flex: 1;
+}

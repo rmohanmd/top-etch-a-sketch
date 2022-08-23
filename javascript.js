@@ -1,10 +1,10 @@
-const wrapper = document.querySelector(".wrapper");
+const container = document.querySelector(".container");
 
-const panels = 0;
+let panels = 0;
 panels = 10;
 for (i = 0; i < panels; i++) {
   const pixels = document.createElement("div");
-  pixels.classList.add("colored");
+  pixels.classList.add("pixel");
   pixels.textContent = "hello";
-  wrapper.appendChild(pixels);
+  container.appendChild(pixels);
 }
