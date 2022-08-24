@@ -1,6 +1,13 @@
 const container = document.querySelector(".container");
 
 let dimension = 10;
+function color() {
+  let r = Math.round(Math.random() * 256);
+  let g = Math.round(Math.random() * 256);
+  let b = Math.round(Math.random() * 256);
+  let rgb = `rgb(${r},${g},${b})`;
+  return rgb;
+}
 
 function generatePad() {
   container.textContent = "";
@@ -20,11 +27,16 @@ function generatePad() {
 
 function draw() {
   const pixel = document.querySelectorAll(".pixel");
-  pixel.forEach((pixel) =>
-    pixel.addEventListener("mouseenter", (e) =>
-      pixel.classList.add("highlight")
-    )
-  );
+  const grey = "rgb(128, 128, 128)";
+  pixel.forEach((pixel) => {
+    pixel.addEventListener("mouseenter", (e) => {
+      const currentColor = window.getComputedStyle(pixel).backgroundColor;
+      if (currentColor === grey) pixel.style.backgroundColor = color();
+      else {
+        //this is where the darken portion of the color would go.
+      }
+    });
+  });
 }
 
 function button() {

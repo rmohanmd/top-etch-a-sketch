@@ -16,11 +16,8 @@
 }
 
 .pixel {
-  background-color: grey;
-}
-
-.highlight {
-  background-color: yellow;
+  background-color: rgb(128, 128, 128);
+  filter: brightness 10%;
 }
 
 .button {
